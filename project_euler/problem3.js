@@ -1,19 +1,18 @@
 function p3()
 {
-  var n = 13195;
-  var int = 1;
-  var a = n;
-  var ans = 1;
+  var n = 600851475143;
+  var a = 0;
   var b = 1;
-  while(a > b)
+
+
+  while(a < b)
   {
-     a = a - 1;
      b = n / a;
+     a++;
 
      if( Number.isInteger(b) )
      {
-      var prime = b;
-      console.log("ans=" + prime);
+      n = b;
       console.log("b=" + b);
     }
      else {
@@ -21,8 +20,6 @@ function p3()
      }
   }
 
-  var maxprime = prime;
-
-  alert(maxprime);
+  alert(n);
 
 }
