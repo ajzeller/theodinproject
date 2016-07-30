@@ -1,0 +1,35 @@
+body {
+  background-color: #d5d5d5;
+  font-family: "Helvetica", serif;
+
+
+}
+
+p {
+  font-size: 0.75em;
+  color: #000;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+button {
+  background-color: #fff;
+  border: 1px solid #aaaaaa;
+  border-radius: .5em;
+}
+
+button:hover {
+  background-color: #d5d5d5;
+
+}
+a {
+  text-decoration: none;
+  color: #333;
+
+}
+
+a:hover {
+  text-decoration: underline;
+}
