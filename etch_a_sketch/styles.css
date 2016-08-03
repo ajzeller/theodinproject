@@ -1,0 +1,97 @@
+body{
+  text-align: center;
+  font-family: 'Open-Sans', sans-serif;
+  color: #555;
+  background-color: #eee;
+}
+h1{
+  font-size: 2em;
+  padding: 0;
+  width: 400px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button{
+  font-size: 1em;
+  background-color: #eee;
+  border: 1px solid #777;
+  -webkit-transition-duration: 0.4s;
+  border-radius: 5px;
+  margin-bottom: 0px;
+
+}
+button:hover {
+  background-color: #ddd;
+  -webkit-transition-duration: 0.4s;
+}
+.main {
+  width: 50%;
+  height: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #000;
+}
+.container {
+  display: table-row;
+  height: 5px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid_element {
+  display: table-cell;
+  height: 5px;
+  width: 5px;
+  /* background-color: #000;
+  opacity: 0;
+  border: 0px solid #000;
+  transition: opacity 100000ms ease-in;
+    -moz-transition: opacity 100000ms ease-in;
+    -webkit-transition: opacity 100000ms ease-in; */
+
+}
+
+.grid_element:hover{
+/*  background-color: #ccc;
+  opacity: 1.0;
+  transition: opacity 100ms ease-out;
+    -moz-transition: opacity 100ms ease-out;
+    -webkit-transition: opacity 100ms ease-out; */
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+form{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+input{
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #777;
+}
+
+#submit {
+  font-size: 1em;
+  width: 100px;
+  border: none;
+  background-color: #eee;
+  border: 1px solid #777;
+  -webkit-transition-duration: 0.4s;
+
+}
+
+#submit:hover {
+  background-color: #ddd;
+  -webkit-transition-duration: 0.4s;
+}
