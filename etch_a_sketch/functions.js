@@ -1,30 +1,36 @@
+function makeGrid(dimension){
+  for(i=1; i <= dimension; i++){
+    for(j=1; j <= dimension; j++){
+      $('.main').append('<div class="grid_element"></div>');
+    };
+  };
+  $('.grid_element').height(500/dimension);
+  $('.grid_element').width(500/dimension);
+};
+
+function clearGrid(){
+  $('.grid_element').remove();
+};
+
+function newGrid(){
+  var n = prompt('What is your desired side dimension?');
+  clearGrid();
+  makeGrid(n);
+};
+
 $(document).ready(function(){
 
-var dimension = 50;
+makeGrid(16);
 
-  for(i=1; i<= dimension; i++){
-    $('.main').append('<div class="container"></div>');
-  };
-
-    for(j=1; j<=dimension; j++){
-      $('.container').append('<div class="grid_element"></div>');
-      console.log('making grid ... ' + dimension);
-  };
-
-$('button').click(function(){
-  $('.grid_element').css('background-color', '#eee');
+$('.grid_element').hover( function(){
+    $(this).css('background-color', '#000');
 });
 
-$('.grid_element').hover(function(){
-    $(this).css('background-color', '#000');
-
+$('.reset_grid').click( function() {
+  newGrid();
+  $('.grid_element').hover( function(){
+      $(this).css('background-color', '#000');
   });
-
-  $('form').submit(function change_dimension(){
-    dimension = document.getElementById('dimension').value;
-    console.log(dimension);
-
-
-  });
+});
 
 });
