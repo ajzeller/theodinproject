@@ -18,6 +18,30 @@ function newGrid(){
   makeGrid(n);
 };
 
+function randomColor(){
+
+  // Define possible hex digits
+  var chars = [
+    '0', '1', '2', '3',
+    '4', '5', '6', '7',
+    '8', '9', 'a', 'b',
+    'c', 'd', 'e', 'f'
+  ];
+
+  var c = [ ];
+
+  for (var i=0; i<6; i++) {
+    // Choose random digit
+    var index = Math.floor(Math.random()*chars.length);
+
+    // Push random digit to array
+    c.push(chars[index]);
+  }
+
+  // Transform the array to the form "#AAAAAA"
+  return '#'+c.join('');
+};
+
 $(document).ready(function(){
 
 makeGrid(16);
@@ -26,10 +50,18 @@ $('.grid_element').hover( function(){
     $(this).css('background-color', '#000');
 });
 
-$('.reset_grid').click( function() {
+$('.reset_grid_black').click( function() {
   newGrid();
   $('.grid_element').hover( function(){
       $(this).css('background-color', '#000');
+  });
+});
+
+$('.reset_grid_random').click( function() {
+  newGrid();
+  $('.grid_element').hover( function(){
+      var color =randomColor;
+      $(this).css('background-color', color);
   });
 });
 
